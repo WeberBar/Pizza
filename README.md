@@ -63,3 +63,7 @@ join pizza_has_pizzaiolo
 group by pizza.sabor;
 ```
 ![pizzaria4](pizza_pizzaiolo_instrução.png)
+
+
+## código:
+![codigo](tarefapizzaria.sql)
