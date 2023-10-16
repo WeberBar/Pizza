@@ -13,3 +13,19 @@ join pizza_has_pizzaiolo
 group by pizza.sabor;
 ```
 ![pizzaria1](pizza_e_pizzaiolos.png)
+
+### Crie um relatório com todas as pizzas e seus ingredientes
+``` sql
+
+-- Seleciona o ingrediente e concatena os sabores das pizzas que o contêm.
+select ingrediente.ingrediente as Ingredientes, group_concat(pizza.sabor) as Sabores
+-- Faz um join entre as tabelas pizza, pizza_has_ingrediente e ingrediente.
+from pizza
+join pizza_has_ingrediente
+ on pizza.id = pizza_has_ingrediente.Pizza_id
+ join ingrediente on  pizza_has_ingrediente.Ingrediente_id = ingrediente.id 
+-- Agrupa os dados pelo ingrediente.
+group by ingrediente.ingrediente;
+
+```
+![pizzaria2](ingrediente_pizza.png)
