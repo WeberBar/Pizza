@@ -12,6 +12,6 @@ join pizza_has_pizzaiolo
 -- Agrupa os dados pelo sabor da pizza.
 group by pizza.sabor;
 
-´´´
+```
 
 ![pizzaria1](pizza_e_pizzaiolos.png)
