@@ -1,5 +1,8 @@
 # Pizza
 
+## Modelo lógico:
+![modelo](modelo_logico_pizza.png)
+
 ### Crie um relatório com todas as pizzas e os pizzaiolos aptos a produzi-las
 ``` sql
 -- Seleciona o sabor da pizza e concatena os nomes dos pizzaiolos que a preparam.
