@@ -28,4 +28,5 @@ join pizza_has_ingrediente
 group by ingrediente.ingrediente;
 
 ```
+
 ![pizzaria2](ingrediente_pizza.png)
