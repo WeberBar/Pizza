@@ -45,3 +45,18 @@ group by ingrediente.ingrediente;
 ```
 
 ![pizzaria2](ingrediente_pizza.png)
+
+### Crie um relatório com os sabores de todas as pizzas, o nome dos pizzaiolos que as fazem e as instruções para produzi-las
+``` sql
+-- Seleciona o sabor da pizza, os nomes dos pizzaiolos que a preparam e as instruções da receita.
+select pizza.sabor as Pizzas, group_concat(pizzaiolo.nome) as Pizzaiolos, receita.instrucoes
+-- Faz um join entre as tabelas pizza, pizza_has_pizzaiolo, pizzaiolo e receita.
+from pizza
+join pizza_has_pizzaiolo
+ on pizza.id = pizza_has_pizzaiolo.Pizza_id
+ join pizzaiolo on   pizzaiolo.id = pizza_has_pizzaiolo.Pizzaiolo_id
+ join receita on receita.Pizza_id = pizza.id 
+-- Agrupa os dados pelo sabor da pizza.
+group by pizza.sabor;
+```
+![pizzaria4](pizza_pizzaiolo_instrução.png)
